@@ -13,7 +13,7 @@ public class decompressor {
 
         FileInputStream fis=new FileInputStream(file);
         GZIPInputStream gzip=new GZIPInputStream(fis);
-        FileOutputStream fos=new FileOutputStream(fileDirectory+"/decompressedFile");
+        FileOutputStream fos=new FileOutputStream(fileDirectory+"/decompressedFile.jpg");
 
 
         byte[] buffer=new byte[1024];
@@ -26,9 +26,9 @@ public class decompressor {
         }
 
 
-        fis.close();
-        fos.close();
         gzip.close();
+        fos.close();
+        fis.close();
     }
 
     public static void main(String[] args) throws IOException {
