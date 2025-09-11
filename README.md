@@ -48,12 +48,13 @@ The application uses Java's built-in compression algorithms to:
 ## Project Structure
 
 ```
-â”œâ”€â”€ GUI/
-â”‚   â””â”€â”€ AppFrame.java          # Main GUI interface
-â”œâ”€â”€ comp_decomp/
-â”‚   â”œâ”€â”€ compressor.java        # Compression logic
-â”‚   â””â”€â”€ decompressor.java      # Decompression logic
-â””â”€â”€ README.md
+----GUI/
+     ----AppFrame.java          # Main GUI interface
+     ----Main.java
+----comp_decomp/
+     ----compressor.java        # Compression logic
+     ----decompressor.java      # Decompression logic
+----README.md
 ```
 
 ## Technologies Used
