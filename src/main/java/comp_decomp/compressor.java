@@ -14,12 +14,15 @@ public class compressor {
        FileOutputStream fos=new FileOutputStream(fileDirectory+"/compressedFile.gz");
        GZIPOutputStream GZIP=new GZIPOutputStream(fos);
 
-       Byte[] Buffer=new Byte[1024];
+       byte[] buffer=new byte[1024];
        int len;
+       while((len=fis.read(buffer))!=-1){
+           GZIP.write(buffer,0,len);
+       }
 
-
-
-
+       GZIP.close();
+       fis.close();
+       fos.close();
 
     }
     public static void main(String[] args) throws IOException {
